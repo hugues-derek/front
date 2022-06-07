@@ -355,3 +355,12 @@ export const SexeStatus = [
   { key: "M", value: "M", text: "Masculin" },
   { key: "F", value: "F", text: "Feminin" },
 ];
+
+export const user = {
+  nom: "Kouakou",
+  prenom: "Manien Hugues-Derek",
+  email: "derekkkouakou05@gmail.com",
+  sexe: "M",
+  status: "client",
+  imageUrl: "./images/customer/team-1.jpg",
+};
