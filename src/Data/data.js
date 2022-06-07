@@ -71,7 +71,7 @@ export const list = [
   },
   {
     id: 3,
-    cover: "../images/list/p-7.png",
+    cover: "../images/list/p-6.png",
     name: "The Real Estate Corner",
     location: "5624 Mooker Market, USA",
     category: "For Rent",
@@ -80,7 +80,7 @@ export const list = [
   },
   {
     id: 4,
-    cover: "../images/list/p-4.png",
+    cover: "../images/list/p-3.png",
     name: "Herringbone Realty",
     location: "5621 Liverpool, London",
     category: "For Sale",
@@ -364,3 +364,9 @@ export const user = {
   status: "client",
   imageUrl: "./images/customer/team-1.jpg",
 };
+
+export function getImage() {
+  let imageNumber = Math.random() * 5 + 1;
+  imageNumber = Math.floor(imageNumber);
+  return imageNumber;
+}

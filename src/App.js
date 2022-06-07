@@ -10,36 +10,39 @@ import Blog from "./Pages/Blog";
 import About from "./Pages/About";
 import Contact from "./Pages/Contacts";
 import UserProfile from "./Pages/UserProfile";
+import Bien from "./Pages/Bien";
 import "semantic-ui-css/semantic.min.css";
 import "./CssFiles/App.css";
 import { AppContextProvider } from "./Store/AppContext";
+import Modal from "./Components/Modal";
+import BienPage from "./Pages/BienPage";
+import VisitePage from "./Pages/VisitePage";
 
 function App() {
   return (
     <Router>
       <AppContextProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="user" element={<UserProfile />} />
-          <Route
-            path="user/:id"
-            element={<p>Hello from User id Component</p>}
-          />
-          <Route path="bien" element={<p>Hello from bien Component</p>} />
-          <Route path="addBien" element={<p>Hello from add Bien</p>} />
-          <Route
-            path="updateBien/:id"
-            element={<p>Hello from updateBien Component</p>}
-          />
-        </Routes>
-        <Footer />
+        <div className="container-fluid">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/user" element={<UserProfile />} />
+            <Route path="/bien" element={<Bien />} />
+            <Route path="bien/:id" element={<BienPage />} />
+            <Route path="/visite" element={<VisitePage />} />
+            <Route
+              path="visite/:id"
+              element={<h1>Hello from visite Id Page</h1>}
+            />
+          </Routes>
+          <Footer />
+        </div>
       </AppContextProvider>
     </Router>
   );

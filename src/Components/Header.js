@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="container flex">
+        <div className="container flex" style={{ zIndex: -1 }}>
           <div className="logo">
             <img src="./images/logo.png" alt="" />
           </div>
